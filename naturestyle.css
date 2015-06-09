@@ -1,5 +1,70 @@
-/*==============MOBILE================*/
+/*==============MOBILE-FIRST================*/
+
+body {
+  background-color: rgb(23, 46, 31);
+}
+
+header ul {
+  list-style-type: none;
+}
+
+.main-body {
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+.navbar {
+  background-color: rgb(202, 241, 201);
+  border-radius: 6px;
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-padding-start: 0;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.navbar li {
+  font-family: Helvetica;
+  font-size: 24px;
+  border-radius: 5px;
+  background-color: white;
+  margin-bottom: 3%;
+  padding: 2% 5% 2% 5%;
+  text-align: center;
+}
+
+.navbar li:last-child {
+  margin-bottom: 0;
+}
+
+ .navbar li:first-child {
+   padding: 0%;
+   background-color: rgba(255, 255, 255, 0);
+ }
 
 /*==============BOXES================*/
 
 /*==============MEDIA QUERY================*/
+
+@media screen and (min-width: 600px) {
+  body {
+    margin: 40px 0;
+  }
+  .navbar {
+    width: 90%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .navbar li {
+    padding: 2%;
+    align-self: center;
+    font-size: 30px;
+    margin-bottom: 0;
+  }
+}
