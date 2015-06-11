@@ -18,6 +18,7 @@ header ul {
   border-radius: 6px;
   width: 75%;
   margin: 0 auto;
+  box-shadow: 4px 4px 4px black;
   padding-top: 3%;
   padding-bottom: 3%;
   display: -webkit-box;
@@ -75,6 +76,20 @@ header ul {
 
 
 /*==============BOXES================*/
+
+.containerA {
+  width: 90%;
+  background-color: white;
+  padding: 2% 4% 2% 4%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4%;
+  border-radius: 10px;
+}
+
+.containerB {
+
+}
 
 /*==============MEDIA QUERY================*/
 
