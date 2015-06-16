@@ -74,7 +74,7 @@ header ul {
 }
 
 
-/*==============BOXES================*/
+/*==============BOXES + COLUMNS================*/
 
 .containerA,
 .containerB,
@@ -82,7 +82,7 @@ header ul {
   background-color: white;
   margin-top: 5%;
   border-radius: 10px;
-  padding: 3%;
+  padding: 4%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -100,14 +100,6 @@ header ul {
   -moz-column-fill: auto;
   column-fill: auto;
 
-  -webkit-column-width: 250px;
-  -moz-column-width: 250px;
-  column-width: 250px;
-
-  -webkit-column-count: 2;
-  -moz-column-count: 2;
-  column-count: 2;
-
   -webkit-column-gap: 40px;
   -moz-column-gap: 40px;
   column-gap: 40px;
@@ -115,8 +107,26 @@ header ul {
   -webkit-column-rule: 2px dotted black;
   -moz-column-rule: 2px dotted black;
   column-rule: 2px dotted black;
+}
 
-  height: 100%;
+.col-A {
+  -webkit-column-width: 250px;
+  -moz-column-width: 250px;
+  column-width: 250px;
+
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+}
+
+.col-B {
+  -webkit-column-width: 200px;
+  -moz-column-width: 200px;
+  column-width: 200px;
+
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
 }
 
 .columns p {
@@ -130,7 +140,7 @@ header ul {
   -moz-column-span: all;
   column-span: all;
   margin-bottom: 1%;
-  margin-top: 1%;
+  margin-top: 0;
 }
 
 .columns h2 {
@@ -146,7 +156,9 @@ header ul {
 .columns img {
   width: 40%;
   height: 40%;
-  margin-top: 0;
+  min-width: 150px;
+  min-height: 150px;
+  margin-top: 1%;
   margin-bottom: 3%;
 }
 
@@ -161,11 +173,26 @@ header ul {
 }
 
 
-.columns hr {
+.hr-all,
+.hr-one {
+  margin-bottom: 1%;
+}
+
+.hr-all {
   -webkit-column-span: all;
   -moz-column-span: all;
   column-span: all;
-  margin-bottom: 1%;
+}
+.hr-one {
+  -webkit-column-span: none;
+  -moz-column-span: none;
+  column-span: none;
+}
+
+.unbreakable {
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
 }
 
 /*==============MEDIA QUERY================*/
