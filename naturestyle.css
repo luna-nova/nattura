@@ -8,6 +8,10 @@ header ul {
   list-style-type: none;
 }
 
+h2 {
+  text-align: center;
+}
+
 .main-body {
   padding-left: 3%;
   padding-right: 3%;
@@ -82,24 +86,33 @@ header ul {
   background-color: white;
   margin-top: 5%;
   border-radius: 10px;
-  padding: 4%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.containerA,
+.columns {
+  padding: 4%;
 }
 
 .containerA {
   width: 90%;
 }
 
+
 .containerB {
-  width: 70%;
+  display: inline-block;
+  padding-left: 4%;
+  padding-right: 4%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.containerB img {
+  display: inline-block;
 }
 
 .columns {
-  -webkit-column-fill: auto;
-  -moz-column-fill: auto;
-  column-fill: auto;
-
   -webkit-column-gap: 40px;
   -moz-column-gap: 40px;
   column-gap: 40px;
@@ -120,9 +133,9 @@ header ul {
 }
 
 .col-B {
-  -webkit-column-width: 200px;
-  -moz-column-width: 200px;
-  column-width: 200px;
+  -webkit-column-width: 250px;
+  -moz-column-width: 250px;
+  column-width: 250px;
 
   -webkit-column-count: 3;
   -moz-column-count: 3;
@@ -146,7 +159,6 @@ header ul {
 .columns h2 {
   margin-top: 0;
   margin-bottom: 3%;
-  text-align: center;
   clear: both;
   -webkit-column-break-inside: avoid;
   page-break-inside: avoid;
@@ -189,12 +201,6 @@ header ul {
   column-span: none;
 }
 
-.unbreakable {
-  -webkit-column-break-inside: avoid;
-  page-break-inside: avoid;
-  break-inside: avoid;
-}
-
 /*==============MEDIA QUERY================*/
 
 @media screen and (min-width: 486px) {
@@ -231,8 +237,14 @@ header ul {
     width: 75%;
     margin-top: 4%;
   }
+  .containerB {
+    width: 38.35%;
+    margin-left: 5%;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
   .columns {
-    width: 80%;
+    width: 86%;
     padding: 2%;
   }
 }
