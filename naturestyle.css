@@ -73,7 +73,7 @@ footer img {
 }
 
 .clearfix:after {
-   content: ".";
+   content: " ";
    visibility: hidden;
    display: block;
    height: 0;
@@ -93,26 +93,28 @@ footer img {
   border-radius: 6px;
   width: 75%;
   margin: 0 auto;
-  padding-top: 3%;
-  padding-bottom: 3%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.flex {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-padding-start: 0;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
-
-.navbar li {
-  font-size: 2em;
+.flex li {
+  font-size: 125%;
   border-radius: 5px;
   background-color: white;
   margin-bottom: 3%;
@@ -120,25 +122,22 @@ footer img {
   text-align: center;
 }
 
-.navbar li:hover {
+.flex li:hover {
   box-shadow: inset 0px 0px 0px 3px rgb(8, 63, 1);
 }
 
-.navbar li:last-child {
+.flex li:last-child {
   margin-bottom: 0;
-}
-
-.navbar li:first-child {
-   padding: 0%;
-   background-color: rgba(255, 255, 255, 0);
 }
 
 #logo {
   width: 100px;
   height: 100px;
+  margin-bottom: 4%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 4%;
+  display: block;
+  padding: 0%;
 }
 
 #logo img {
@@ -205,7 +204,7 @@ footer img {
 }
 .containerC,
 .containerB {
-  padding: 2% 4% 2% 4%;
+  padding: 2% 4% 4% 4%;
 }
 
 .containerA,
@@ -322,7 +321,12 @@ footer img {
     margin-bottom: 175px;
   }
   .navbar {
-    width: 575px;
+    min-width: 582px;
+  }
+  .flex {
+    float: right;
+    width: 72%;
+    min-height: 175px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -webkit-flex-direction: row;
@@ -332,19 +336,19 @@ footer img {
     -ms-flex-pack: distribute;
     justify-content: space-around;
   }
-  .navbar li {
+  .flex li {
     padding: 2%;
     align-self: center;
-    font-size: 24px;
+    margin-right: 4%;
     margin-bottom: 0;
-    margin-right: 3%;
   }
   #logo {
-    min-width: 125px;
-    min-height: 125px;
-    margin-left: 3%;
-    margin-right: 3%;
-    margin-bottom: 0;
+    min-height: 150px;
+    min-width: 150px;
+    margin-left: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    display: inline-block;
   }
   .containerA {
     width: 96%;
@@ -359,6 +363,7 @@ footer img {
   .containerC {
     padding-left: 2%;
     padding-right: 2%;
+    padding-bottom: 2%;
     max-width: 27%;
     margin-right: 3.4%;
     float: left;
@@ -368,5 +373,14 @@ footer img {
   }
   .columns {
     padding: 2%;
+  }
+}
+
+@media screen and (min-width: 1068px) {
+  .flex li {
+    margin-right: 10%;
+  }
+  #logo {
+    margin-left: 3%;
   }
 }
