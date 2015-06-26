@@ -1,61 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="nature">
   <head>
     <meta charset="utf-8">
     <title>Nattura Wiki</title>
     <link rel="stylesheet" href="./naturestyle.css" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Dosis:500' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Autour+One' rel='stylesheet' type='text/css'>
+    <script src="./lib/angular.min.js" type="text/javascript"></script>
+    <script src="./lib/angular-route.min.js" type="text/javascript"></script>
   </head>
-  <body>
+  <body ng-controller="MainController">
     <div class="main-body">
       <header class="navbar clearfix">
-        <div id="logo"><img src="./images/billyxkaplanillustration_nattura.jpg"/></div>
+        <div id="logo"><a ng-href="#/"><img src="./images/billyxkaplanillustration_nattura.jpg"/></a></div>
         <ul class="flex font-autour">
           <li>MAP</li>
-          <li>LORE</li>
+          <li><a ng-href="#/lore">LORE</a></li>
           <li>CHARACTERS</li>
-          <li>ART</li>
-          <li>BEASTIARY</li>
+          <li>{{ "ART" + boop }}</li>
+          <li><a ng-href="#/beasts">BEASTIARY</a></li>
           <li>EXTRAS</li>
         </ul>
       </header>
-      <div class="containerA white">
-        <h1 class="font-dosis">WORLD OF NATTURA</h1>
-        <p class="font-dosis">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <p class="font-dosis">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </div>
-      <div class="containerA white">
-          <p class="font-dosis">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-      </div>
-      <div class="containerC yellow font-dosis">
-        <h2>Nattura Musica</h2>
-        <hr class="black">
-        <p>
-          Nattura even has an original soundtrack to go along with it! Help set the mood and immerse your players with this orchestral adventure. Head over <a href="http://www.lunanova.bandcamp.com">here</a> to stream or purchase.
-        </p>
-      </div>
-      <div class="containerC green font-dosis">
-        <h2>Contact</h2>
-        <hr class="black">
-        <p>
-          Want to get in touch? Feel free to shoot an email to <strong style="text-decoration: underline">heartofnova@gmail.com</strong> for any questions, comments, or compliments!
-        </p>
-      </div>
-      <div class="containerC blue font-dosis">
-        <h2>Boxes</h2>
-        <hr class="black">
-        <p>
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </div>
+      <div ng-view></div>
     </div>
-    <footer><img src="http://flipbooksoft.com/themes/default/images/footer.png"/></footer>
+    <footer><p>lalalalala</p></footer>
+    <script src="./js/app.js" type="text/javascript"></script>
   </body>
 </html>
