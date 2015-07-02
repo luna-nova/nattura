@@ -171,27 +171,33 @@ li a:visited {
 .blue {
   background-color: rgb(73, 131, 147);
 }
-
 .green {
   background-color: rgb(99, 177, 107);
 }
-
 .yellow {
   background-color: rgb(225, 227, 110);
 }
-
+.red {
+  background-color: rgb(163, 81, 99);
+}
+.white {
+  background-color: white;
+}
+.black {
+  border-color: black;
+  background-color: black;
+  color: white;
+}
+.grey {
+  background-color: rgb(209, 209, 209);
+}
 .darkgreen {
   background-color: rgb(16, 31, 17);
   color: rgb(215, 215, 215);
   box-shadow: inset 0px 0px 0px 3px rgb(172, 172, 172);
 }
-.white {
-  background-color: white;
-}
 
-.black {
-  border-color: black;
-}
+
 
 /*==============BOXES + COLUMNS================*/
 
@@ -213,6 +219,11 @@ li a:visited {
 .containerA p {
   font-size: 16px;
 }
+
+.containerA p + p {
+  margin-top: 5%;
+}
+
 .containerC,
 .containerB {
   padding: 2% 4% 4% 4%;
@@ -226,6 +237,7 @@ li a:visited {
 .containerB img,
 .containerB {
   display: inline-block;
+  vertical-align: top;
 }
 
 .containerC {
@@ -365,6 +377,9 @@ li a:visited {
     width: 96%;
     margin-top: 4%;
     padding: 2%;
+  }
+  .containerA p + p {
+    margin-top: 2%;
   }
   .containerB {
     width: 38.35%;
