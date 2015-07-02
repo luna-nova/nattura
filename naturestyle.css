@@ -237,6 +237,7 @@ li a:visited {
 .containerB img,
 .containerB {
   display: inline-block;
+  vertical-align: top;
 }
 
 .containerC {
