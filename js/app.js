@@ -1,11 +1,12 @@
-var nature = angular.module("nature", ["ngRoute"])
+var nature = angular.module("nature", ["ngRoute", "beastiary"])
   .config(["$routeProvider", function ($routeProvider){
   $routeProvider
     .when("/", {
-      templateUrl: "partials/home.html",
+      templateUrl: "partials/home.html"
     })
     .when("/beasts", {
-      templateUrl: "partials/beast.html"
+      templateUrl: "partials/beast.html",
+      controller: "MonsterController"
     })
     .when("/lore", {
       templateUrl: "partials/lore.html"
