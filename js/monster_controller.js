@@ -1,6 +1,7 @@
 var monsterMod = angular.module("beastiary", ["ngRoute"]);
 
-monsterMod.controller("MonsterController", function($scope) {
+monsterMod.controller("MonsterController", ["$scope", "$routeParams", function($scope, $routeParams) {
+  $scope.beastIndex = $routeParams.index;
   $scope.monsters = [
     {
       name: "Sapball",
@@ -27,4 +28,4 @@ monsterMod.controller("MonsterController", function($scope) {
       }
     }
   ]
-});
+}]);
