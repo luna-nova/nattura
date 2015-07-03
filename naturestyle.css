@@ -69,6 +69,8 @@ footer {
 }
 
 footer img {
+  position: relative;
+  top: 25px;
   width: 100%;
 }
 
@@ -212,12 +214,14 @@ li a:visited {
   margin-right: auto;
 }
 
-.containerA,
 .containerD,
 .columns {
   padding: 4%;
 }
 
+.containerA {
+  padding: 2% 4% 4% 4%;
+}
 .containerA p {
   font-size: 16px;
 }
@@ -361,7 +365,7 @@ li a:visited {
   .main-body{
     padding-left: 10%;
     padding-right: 10%;
-    margin-bottom: 175px;
+    min-height: 450px;
   }
   .navbar {
     min-width: 582px;
@@ -396,7 +400,7 @@ li a:visited {
   .containerA {
     width: 96%;
     margin-top: 4%;
-    padding: 2%;
+    padding: 2% 2% 3% 2%;
   }
   .containerA p + p {
     margin-top: 2%;
