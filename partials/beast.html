@@ -1,18 +1,29 @@
 
-  <div class="containerB white font-dosis">
+  <div class="columns col-C white font-dosis">
     <ul>
       <li ng-repeat="monster in monsters">
         <a ng-href="#/beasts/{{$index}}">{{ monster.name }}</a>
       </li>
     </ul>
   </div>
-  <div class="columns col-B white font-dosis">
+  <div class="columns col-B white font-dosis" ng-hide="beastIndex === undefined || beastIndex % 2 === 0">
+    <h2>{{monsters[beastIndex].name}}</h2>
+    <hr class="hr-one">
+    <img ng-src="{{ monsters[beastIndex].image.url }}" class="{{ monsters[beastIndex].image.class }}"/>
+    <p>
+      {{ monsters[beastIndex].text.paragraph1 }}
+    </p>
+    <p>
+      {{ monsters[beastIndex].text.paragraph2 }}
+    </p>
+  </div>
+  <div class="columns col-B white font-dosis" ng-hide="beastIndex === undefined || beastIndex % 2 === 1">
     <h2>{{monsters[beastIndex].name}}</h2>
     <hr class="hr-one">
     <p>
       {{ monsters[beastIndex].text.paragraph1 }}
     </p>
-    <img ng-src="{{ monsters[beastIndex].image }}" class="left-img"/>
+    <img ng-src="{{ monsters[beastIndex].image.url }}" class="{{ monsters[beastIndex].image.class }}"/>
     <p>
       {{ monsters[beastIndex].text.paragraph2 }}
     </p>

@@ -204,6 +204,7 @@ li a:visited {
 .containerA,
 .containerB,
 .containerC,
+.containerD,
 .columns {
   margin-top: 5%;
   border-radius: 6px;
@@ -212,6 +213,7 @@ li a:visited {
 }
 
 .containerA,
+.containerD,
 .columns {
   padding: 4%;
 }
@@ -272,6 +274,24 @@ li a:visited {
   -webkit-column-count: 3;
   -moz-column-count: 3;
   column-count: 3;
+}
+
+.col-C {
+  -webkit-column-width: 100px;
+  -moz-column-width: 100px;
+  column-width: 100px;
+
+  -webkit-column-count: 5;
+  -moz-column-count: 5;
+  column-count: 5;
+
+  -webkit-column-rule: 2px solid black;
+  -moz-column-rule: 2px solid black;
+  column-rule: 2px solid black;
+}
+
+.col-C li {
+  margin-left: 5%;
 }
 
 .columns p {

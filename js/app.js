@@ -4,6 +4,10 @@ var nature = angular.module("nature", ["ngRoute", "beastiary"])
     .when("/", {
       templateUrl: "partials/home.html"
     })
+    .when("/beasts", {
+      templateUrl: "partials/beast.html",
+      controller: "MonsterController"
+    })
     .when("/beasts/:index", {
       templateUrl: "partials/beast.html",
       controller: "MonsterController"
