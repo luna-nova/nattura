@@ -1,30 +1,30 @@
 
-  <div class="columns col-B white font-dosis">
-    <h2>Web Wisp</h2>
+  <div class="columns col-C white font-dosis">
+    <ul>
+      <li ng-repeat="monster in monsters">
+        <a ng-href="#/beasts/{{$index}}">{{ monster.name }}</a>
+      </li>
+    </ul>
+  </div>
+  <div class="columns col-B white font-dosis" ng-hide="beastIndex === undefined || beastIndex % 2 === 0">
+    <h2>{{monsters[beastIndex].name}}</h2>
+    <hr class="hr-one">
+    <img ng-src="{{ monsters[beastIndex].image.url }}" class="{{ monsters[beastIndex].image.class }}"/>
+    <p>
+      {{ monsters[beastIndex].text.paragraph1 }}
+    </p>
+    <p>
+      {{ monsters[beastIndex].text.paragraph2 }}
+    </p>
+  </div>
+  <div class="columns col-B white font-dosis" ng-hide="beastIndex === undefined || beastIndex % 2 === 1">
+    <h2>{{monsters[beastIndex].name}}</h2>
     <hr class="hr-one">
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-      fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-      culpa qui officia deserunt mollit anim id est laborum.
+      {{ monsters[beastIndex].text.paragraph1 }}
     </p>
-    <img src="http://lorempixel.com/600/600" class="right-img"/>
+    <img ng-src="{{ monsters[beastIndex].image.url }}" class="{{ monsters[beastIndex].image.class }}"/>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-      fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-      culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-      fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-      culpa qui officia deserunt mollit anim id est laborum.
+      {{ monsters[beastIndex].text.paragraph2 }}
     </p>
   </div>

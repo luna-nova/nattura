@@ -69,6 +69,8 @@ footer {
 }
 
 footer img {
+  position: relative;
+  top: 25px;
   width: 100%;
 }
 
@@ -204,6 +206,7 @@ li a:visited {
 .containerA,
 .containerB,
 .containerC,
+.containerD,
 .columns {
   margin-top: 5%;
   border-radius: 6px;
@@ -211,11 +214,14 @@ li a:visited {
   margin-right: auto;
 }
 
-.containerA,
+.containerD,
 .columns {
   padding: 4%;
 }
 
+.containerA {
+  padding: 2% 4% 4% 4%;
+}
 .containerA p {
   font-size: 16px;
 }
@@ -272,6 +278,24 @@ li a:visited {
   -webkit-column-count: 3;
   -moz-column-count: 3;
   column-count: 3;
+}
+
+.col-C {
+  -webkit-column-width: 100px;
+  -moz-column-width: 100px;
+  column-width: 100px;
+
+  -webkit-column-count: 5;
+  -moz-column-count: 5;
+  column-count: 5;
+
+  -webkit-column-rule: 2px solid black;
+  -moz-column-rule: 2px solid black;
+  column-rule: 2px solid black;
+}
+
+.col-C li {
+  margin-left: 5%;
 }
 
 .columns p {
@@ -341,7 +365,7 @@ li a:visited {
   .main-body{
     padding-left: 10%;
     padding-right: 10%;
-    margin-bottom: 175px;
+    min-height: 450px;
   }
   .navbar {
     min-width: 582px;
@@ -376,7 +400,7 @@ li a:visited {
   .containerA {
     width: 96%;
     margin-top: 4%;
-    padding: 2%;
+    padding: 2% 2% 3% 2%;
   }
   .containerA p + p {
     margin-top: 2%;
